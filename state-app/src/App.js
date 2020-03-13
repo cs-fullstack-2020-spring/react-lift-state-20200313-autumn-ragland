@@ -1,19 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Person from './components/Person';
+import AppContainer from './components/AppContainer';
 
 function App() {
-  let age1 = 21;
-  let age2 = 30;
-  let name1 = "Autumn";
-  let name2 = "Kevin";
-  alert(`The initial name and age of the first person is ${age1} ${name1}\nThe initial name and age of the second person is ${age2} ${name2}`)
+  // let age1 = 21;
+  // let age2 = 30;
+  // let name1 = "Autumn";
+  // let name2 = "Kevin";
+  // alert(`The initial name and age of the first person is ${age1} ${name1}\nThe initial name and age of the second person is ${age2} ${name2}`)
   return (
     <div className="App">
       <h1>Lifting State Lecture 03-13-2020</h1>
-      <Person name = {name1} age = {age1}/>
-      <Person name = {name2} age = {age2}/>
+      <AppContainer/>
+      {/* <Person name = {name1} age = {age1}/>
+      <Person name = {name2} age = {age2}/> */}
     </div>
   );
 }
