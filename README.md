@@ -21,3 +21,7 @@
 - Pass this method in an `onClick` event listener in the button  
 
 ### Lifting State
+- Create a parents component called `AppContainer.jsx`
+- DELETE `Person` component from `App.js` and any references to `Person` component
+- Render `Person` component in `AppContainer` component passing in the same attributes
+- Define a property of state in `AppContainer` called totalOfAges and set the value to 0

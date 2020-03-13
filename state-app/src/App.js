@@ -4,6 +4,7 @@ import './App.css';
 import AppContainer from './components/AppContainer';
 
 function App() {
+  // !! Parent Container added so all references to Person are not in `AppContainer.jsx`
   // let age1 = 21;
   // let age2 = 30;
   // let name1 = "Autumn";
