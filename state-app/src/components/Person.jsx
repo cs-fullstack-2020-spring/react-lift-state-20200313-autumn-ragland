@@ -20,6 +20,9 @@ class Person extends Component{
     addOne = () => {
         // update the state of age to be the current age + 1
         this.setState({age : this.state.age + 1});
+
+        // lift state to the App Container
+        this.props.updateAge();
     }
 
     render(){

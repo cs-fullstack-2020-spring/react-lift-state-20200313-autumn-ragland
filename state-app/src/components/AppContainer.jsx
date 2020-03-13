@@ -5,8 +5,14 @@ class AppContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            total_age: 0,
+            totalOfAllAges: 0,
         }
+    }
+
+    // define method to update the state - this method will be called via callback function passed to the component
+    updateAge = () => {
+        let updatedAge = this.state.totalOfAllAges + 1;
+        this.setState({totalOfAllAges  : updatedAge});
     }
 
     render() {
@@ -14,13 +20,13 @@ class AppContainer extends Component {
         let age2 = 30;
         let name1 = "Autumn";
         let name2 = "Kevin";
-        // alert initial values before state is updated in child components
-        alert(`The initial name and age of the first person is ${age1} ${name1}\nThe initial name and age of the second person is ${age2} ${name2}`);
+        // log initial values before state is updated in child components
+        console.log(`The initial name and age of the first person is ${age1} ${name1}\nThe initial name and age of the second person is ${age2} ${name2}`);
         return (
             <div>
-                <h1>Total of all ages is {this.state.total_age}</h1>
-                <Person name={name1} age={age1} />
-                <Person name={name2} age={age2} />
+                <h1>You clicked the add one buttons {this.state.totalOfAllAges} times</h1>
+                <Person name={name1} age={age1} updateAge ={this.updateAge}/>
+                <Person name={name2} age={age2} updateAge ={this.updateAge}/>
             </div>
         )
     }
