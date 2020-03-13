@@ -8,7 +8,7 @@ function App() {
   let age2 = 30;
   let name1 = "Autumn";
   let name2 = "Kevin";
-  alert(`The initial name and age of the first person is ${age1} ${name1}\nThe initial name and age of the first person is ${age2} ${name2}`)
+  alert(`The initial name and age of the first person is ${age1} ${name1}\nThe initial name and age of the second person is ${age2} ${name2}`)
   return (
     <div className="App">
       <h1>Lifting State Lecture 03-13-2020</h1>
