@@ -24,7 +24,7 @@ class AppContainer extends Component {
         console.log(`The initial name and age of the first person is ${age1} ${name1}\nThe initial name and age of the second person is ${age2} ${name2}`);
         return (
             <div>
-                <h1>You clicked the add one buttons {this.state.numberOfClicks} times</h1>
+                <h1>You clicked an add one buttons {this.state.numberOfClicks} times</h1>
                 <Person name={name1} age={age1} updateAge ={this.updateAge}/>
                 <Person name={name2} age={age2} updateAge ={this.updateAge}/>
             </div>
