@@ -4,11 +4,16 @@ import './App.css';
 import Person from './components/Person';
 
 function App() {
+  let age1 = 21;
+  let age2 = 30;
+  let name1 = "Autumn";
+  let name2 = "Kevin";
+  alert(`The initial name and age of the first person is ${age1} ${name1}\nThe initial name and age of the first person is ${age2} ${name2}`)
   return (
     <div className="App">
       <h1>Lifting State Lecture 03-13-2020</h1>
-      <Person name = "Autumn" age = "21"/>
-      <Person name = "Keivn" age = "30"/>
+      <Person name = {name1} age = {age1}/>
+      <Person name = {name2} age = {age2}/>
     </div>
   );
 }
