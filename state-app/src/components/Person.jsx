@@ -12,9 +12,7 @@ class Person extends Component{
 
     // state cannot be updated in render because the component will re-render each time state is updated and you will get caught in an infinite loop
     componentDidMount(){
-        let age_int = parseInt(this.state.age);
-        age_int += 1;
-        this.setState({age : age_int});
+        this.setState({age : this.state.age + 1});
     }
 
     render(){
