@@ -1,12 +1,20 @@
 import React, {Component} from 'react';
-
+// class based component that renders a name and age passed to the component as a prop and updated via state
 class Person extends Component{
     constructor(props){
         super(props);
+        // state will always initially be defined in the constructor
         this.state = {
             name : this.props.name,
-            age : this.props.age
+            age : this.props.age,
         }
+    }
+
+    // state cannot be updated in render because the component will re-render each time state is updated and you will get caught in an infinite loop
+    componentDidMount(){
+        let age_int = parseInt(this.state.age);
+        age_int += 1;
+        this.setState({age : age_int});
     }
 
     render(){
