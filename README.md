@@ -24,4 +24,7 @@
 - Create a parents component called `AppContainer.jsx`
 - DELETE `Person` component from `App.js` and any references to `Person` component
 - Render `Person` component in `AppContainer` component passing in the same attributes
-- Define a property of state in `AppContainer` called totalOfAges and set the value to 0
+- Define a property of state in `AppContainer` called `numberOfClicks` and set the value to 0
+- Update the state property `numberOfClicks` in an ARROW function `updateAge`
+- Pass this method to the child components `Person`
+- In `Person` component call your passed method each time the button is clicked
