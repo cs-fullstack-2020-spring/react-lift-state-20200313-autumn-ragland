@@ -10,8 +10,15 @@ class Person extends Component{
         }
     }
 
-    // state cannot be updated in render because the component will re-render each time state is updated and you will get caught in an infinite loop
-    componentDidMount(){
+    // // state cannot be updated in render because the component will re-render each time state is updated and you will get caught in an infinite loop
+    // componentDidMount(){
+    //     // typically state will be updated on an event so this initial example is commented out 
+    //     this.setState({age : this.state.age + 1});
+    // }
+
+    // event handler method that updates the state - this event is called on click
+    addOne = () => {
+        // update the state of age to be the current age + 1
         this.setState({age : this.state.age + 1});
     }
 
@@ -20,6 +27,7 @@ class Person extends Component{
             <div>
                 <h3>Name : {this.state.name}</h3>
                 <h3>Age : {this.state.age}</h3>
+                <button onClick = {this.addOne}>Add 1 to age</button>
             </div>
         )
     }

@@ -15,5 +15,9 @@
 - Update the age property of state to five more than the age passed in a lifecycle method such as `componentDidMount()`
 
 ### Events
+- Comment out the lifecycle method - we will not update the state in an event!
+- Add a button to the Person component underneath the tags displaying the name and age
+- Define and event handler arrow function above the render method called `addOne`
+- Pass this method in an `onClick` event listener in the button  
 
 ### Lifting State
